@@ -1,0 +1,26 @@
+body {
+  margin: 0px 0px;
+}
+main {
+  margin: 0px 0px;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+img {
+  width: 100vw;
+}
+h1 {
+  margin: 80px 0px;
+  font-size: 48px;
+}
+p {
+  font-size: 28px;
+  line-height: 40px;
+}
+.text {
+  position: absolute;
+  top: 37%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
