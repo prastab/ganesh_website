@@ -19,7 +19,7 @@ ul {
 a {
   font-size: 24px;
   text-decoration: none;
-  padding: 0 10vw;
+  margin: 0 10vw;
   color: white;
 }
 a:hover {
@@ -67,7 +67,7 @@ section {
 @media (max-width: 600px) {
   a {
     font-size: 18px;
-    padding: 0 5vw;
+    margin: 0 5vw;
   }
   .bg {
     margin-left: -470px;
