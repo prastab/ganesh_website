@@ -1,6 +1,31 @@
 body {
   margin: 0px 0px;
 }
+
+#navbar {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  top: 0;
+  width: 100%;
+  background-color: rgb(11, 12, 14);
+  z-index: 2;
+}
+ul {
+  padding-top: 10px;
+  list-style: none;
+  display: flex;
+}
+a {
+  font-size: 24px;
+  text-decoration: none;
+  padding: 0 10vw;
+  color: white;
+}
+a:hover {
+  color: #080805;
+}
+
 main {
   margin: 0px 0px;
   position: relative;
@@ -9,6 +34,7 @@ main {
   overflow: hidden;
 }
 img {
+  margin-top: 60px;
   width: 100vw;
   max-height: 100vh;
 }
@@ -39,6 +65,10 @@ section {
   float: left;
 }
 @media (max-width: 600px) {
+  a {
+    font-size: 18px;
+    padding: 0 5vw;
+  }
   .bg {
     margin-left: -470px;
     height: 90vh;
