@@ -56,10 +56,13 @@ section {
   top: 37%;
   left: 78%;
   transform: translate(-50%, -50%);
+  animation-name: slide;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in-out;
 }
 .text {
   position: absolute;
-  top: 32%;
+  top: 35%;
   left: 30%;
   transform: translate(-50%, -50%);
   float: left;
@@ -94,6 +97,17 @@ section {
     position: absolute;
     top: 60%;
     left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@keyframes slide {
+  0% {
+    top: 37%;
+    left: 150%;
+  }
+  100% {
+    top: 37%;
+    left: 78%;
     transform: translate(-50%, -50%);
   }
 }
