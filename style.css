@@ -23,7 +23,7 @@ a {
   color: white;
 }
 a:hover {
-  color: #0ddae9;
+  color: #a10093;
 }
 
 main {
@@ -41,11 +41,13 @@ img {
 h1 {
   margin: 80px 0px;
   font-size: 48px;
+  animation: text 1.2s 1;
 }
 p {
   font-size: 32px;
   line-height: 40px;
   width: 45vw;
+  animation: text1 1.2s 1;
 }
 section {
   padding-top: 200px;
@@ -109,5 +111,32 @@ section {
     top: 37%;
     left: 78%;
     transform: translate(-50%, -50%);
+  }
+}
+@keyframes text {
+  0% {
+    transform: translateY(100px);
+    margin-bottom: -40px;
+    font-size: 60px;
+  }
+  30% {
+    letter-spacing: 25px;
+    transform: translateY(100px);
+    margin-bottom: -40px;
+    font-size: 60px;
+  }
+  70% {
+    letter-spacing: 8px;
+    transform: translateY(100px);
+    margin-bottom: -40px;
+    font-size: 60px;
+  }
+}
+@keyframes text1 {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
   }
 }
