@@ -100,17 +100,18 @@ section {
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
+    animation: slide1 1.2s;
   }
-  @keyframes slide {
-    0% {
-      top: 60%;
-      left: 150%;
-    }
-    100% {
-      top: 60%;
-      left: 78%;
-      transform: translate(-50%, -50%);
-    }
+}
+@keyframes slide1 {
+  0% {
+    top: 60%;
+    left: 150%;
+  }
+  100% {
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 @keyframes slide {
