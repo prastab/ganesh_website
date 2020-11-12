@@ -101,6 +101,17 @@ section {
     left: 50%;
     transform: translate(-50%, -50%);
   }
+  @keyframes slide {
+    0% {
+      top: 60%;
+      left: 150%;
+    }
+    100% {
+      top: 60%;
+      left: 78%;
+      transform: translate(-50%, -50%);
+    }
+  }
 }
 @keyframes slide {
   0% {
