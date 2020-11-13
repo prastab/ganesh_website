@@ -130,11 +130,11 @@ a:hover {
     height: auto;
     object-fit: contain;
   }
-  h1 {
+  .name {
     margin: 80px 0px;
     font-size: 36px;
   }
-  p {
+  .detail {
     font-size: 28px;
     line-height: 30px;
     animation: text1 1.5s 1;
@@ -156,16 +156,16 @@ a:hover {
   }
 }
 @media (max-width: 600px) {
-  h1 {
+  .name {
     padding: auto;
     font-size: 28px;
     animation: text2 1.5s ease-in;
   }
-  p {
+  .detail {
     font-size: 20px;
     line-height: 30px;
   }
-  a {
+  #navbar a {
     font-size: 18px;
     margin: 0 5vw;
   }
