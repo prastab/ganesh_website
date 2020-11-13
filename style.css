@@ -153,6 +153,7 @@ a:hover {
   }
   .art {
     width: 70vw;
+    padding: 20px;
   }
 }
 @media (max-width: 600px) {
