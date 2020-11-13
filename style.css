@@ -157,8 +157,10 @@ a:hover {
   }
 }
 @media (max-width: 600px) {
+  .welcome {
+    padding-top: 50px;
+  }
   .name {
-    padding: auto;
     font-size: 28px;
     animation: text2 1.5s ease-in;
   }
