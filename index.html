@@ -10,6 +10,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script
+      src="https://kit.fontawesome.com/daab3f06a0.js"
+      crossorigin="anonymous"
+    ></script>
 
     <title>Document</title>
   </head>
@@ -108,8 +112,155 @@
         </section>
       </main>
     </div>
+    <div class="contact">
+      <span class="big-circle"></span>
+      <img src="assets/shape.png" class="square" alt="" />
+      <div class="form">
+        <div class="contact-info">
+          <h3 class="title">Let's get in touch</h3>
+          <p class="connect">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+            dolorum adipisci recusandae praesentium dicta!
+          </p>
+
+          <div class="info">
+            <div class="information">
+              <img src="assets/location.png" class="icon" alt="" />
+              <p>92 Cherry Drive Uniondale, NY 11553</p>
+            </div>
+            <div class="information">
+              <img src="assets/email.png" class="icon" alt="" />
+              <p>lorem@ipsum.com</p>
+            </div>
+            <div class="information">
+              <img src="assets/phone.png" class="icon" alt="" />
+              <p>123-456-789</p>
+            </div>
+          </div>
+
+          <div class="social-media">
+            <p>Connect with us :</p>
+            <div class="social-icons">
+              <a href="#">
+                <i class="fab fa-facebook-f fa-2x"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-twitter fa-2x"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-instagram fa-2x"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-linkedin-in fa-2x"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <span class="circle one"></span>
+          <span class="circle two"></span>
+          <form action="https://formspree.io/f/xpzolkab" method="POST" autocomplete="off" id="my-form">
+            <h3 class="title">Contact us</h3>
+            <div class="input-container">
+              <input type="text" name="name" class="input" />
+              <label for="">Name</label>
+              <span>Name</span>
+            </div>
+            <div class="input-container">
+              <input type="email" name="email" class="input" />
+              <label for="">Email</label>
+              <span>Email</span>
+            </div>
+            <div class="input-container">
+              <input type="tel" name="phone" class="input" />
+              <label for="">Phone</label>
+              <span>Phone</span>
+            </div>
+            <div class="input-container textarea">
+              <textarea name="message" class="input"></textarea>
+              <label for="">Message</label>
+              <span>Message</span>
+            </div>
+            <input type="submit" value="Send" class="form-btn" />
+          </form>
+          <div id="status"></div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p>© 2020- All rights reserved.</p>
+      <p class="dev">Developed by <a href=""> Prastab Ghimire</p>
+    </footer>
+
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
+      const inputs = document.querySelectorAll(".input");
+
+      function focusFunc() {
+        let parent = this.parentNode;
+        parent.classList.add("focus");
+      }
+
+      function blurFunc() {
+        let parent = this.parentNode;
+        if (this.value == "") {
+          parent.classList.remove("focus");
+        }
+      }
+
+      inputs.forEach((input) => {
+        input.addEventListener("focus", focusFunc);
+        input.addEventListener("blur", blurFunc);
+      });
+
+      window.addEventListener("DOMContentLoaded", function () {
+        // get the form elements defined in your form HTML above
+
+        var form = document.getElementById("my-form");
+        // var button = document.getElementById("my-form-button");
+        var status = document.getElementById("status");
+
+        // Success and Error functions for after the form is submitted
+
+        function success() {
+          form.reset();
+          status.classList.add("success");
+          status.innerHTML = "Thanks!";
+        }
+
+        function error() {
+          status.classList.add("error");
+          status.innerHTML = "Oops! There was a problem.";
+        }
+
+        // handle the form submission event
+
+        form.addEventListener("submit", function (ev) {
+          ev.preventDefault();
+          var data = new FormData(form);
+          ajax(form.method, form.action, data, success, error);
+        });
+      });
+
+      // helper function for sending an AJAX request
+
+      function ajax(method, url, data, success, error) {
+        var xhr = new XMLHttpRequest();
+        xhr.open(method, url);
+        xhr.setRequestHeader("Accept", "application/json");
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState !== XMLHttpRequest.DONE) return;
+          if (xhr.status === 200) {
+            success(xhr.response, xhr.responseType);
+          } else {
+            error(xhr.status, xhr.response, xhr.responseType);
+          }
+        };
+        xhr.send(data);
+      }
+
+
       AOS.init({
         offset: 300, // offset (in px) from the original trigger point
         delay: 0, // values from 0 to 3000, with step 50ms
