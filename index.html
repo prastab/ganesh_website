@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Oswald&family=Montserrat&family=Poppins&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -164,12 +164,12 @@
           <form action="https://formspree.io/f/xpzolkab" method="POST" autocomplete="off" id="my-form">
             <h3 class="title">Contact us</h3>
             <div class="input-container">
-              <input type="text" name="name" class="input" />
+              <input type="text" name="name" class="input" required />
               <label for="">Name</label>
               <span>Name</span>
             </div>
             <div class="input-container">
-              <input type="email" name="email" class="input" />
+              <input type="email" name="email" class="input" required />
               <label for="">Email</label>
               <span>Email</span>
             </div>
@@ -179,7 +179,7 @@
               <span>Phone</span>
             </div>
             <div class="input-container textarea">
-              <textarea name="message" class="input"></textarea>
+              <textarea name="message" class="input" required></textarea>
               <label for="">Message</label>
               <span>Message</span>
             </div>
