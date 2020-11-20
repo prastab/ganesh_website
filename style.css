@@ -171,15 +171,16 @@
 }
 @media (max-width: 600px) {
   .welcome {
-    padding-top: 50px;
+    padding-top: 50px 5%;
   }
   .name {
-    font-size: 40px;
+    font-size: 36px;
     animation: text2 1.5s ease-in;
   }
   .detail {
-    font-size: 24px;
+    font-size: 22px;
     line-height: 30px;
+    letter-spacing: 1px;
     text-align: center;
   }
   #navbar a {
@@ -189,6 +190,9 @@
   .art {
     width: 75vw;
     padding: 20px;
+  }
+  .text {
+    width: 100vw;
   }
 }
 
